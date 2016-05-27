@@ -1,0 +1,36 @@
+			load r4, @zero
+			load r5, @counter
+			load r6, @prompt
+			load r7, @newline
+			load r8, @error
+			load r9, @listing
+			jump @request
+			
+@fail:		echo r8			
+@request:	echo r6
+			iinput @input
+			echo r7
+			jumpiftrue @noproblem
+			jump @fail
+
+@noproblem:	echo r9
+			load r1, @input
+			
+@loop:		testequals r4, r5
+			jumpiftrue @end
+			increment r1
+			echo r1
+			echo r7
+			decrement r5
+			jump @loop
+			
+@end:		halt		
+			
+@prompt:	DEFSTR "Unesite pocetni broj: "
+@newline:	DEFSTR "\n"
+@error:		DEFSTR "Unos nije moguce protumaciti kao cijeli broj.\n"
+@listing:	DEFSTR "Sljedecih 5 brojeva je:\n"
+
+@counter:	DEFINT 5
+@zero:		DEFINT 0
+@input:		RESERVE

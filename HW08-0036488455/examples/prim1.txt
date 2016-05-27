@@ -1,0 +1,5 @@
+load r7, @poruka
+echo r7
+halt
+
+@poruka: DEFSTR "Hello world!\n"

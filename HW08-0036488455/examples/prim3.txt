@@ -1,0 +1,50 @@
+			move r15, @stackTop
+			load r6, @prompt
+			load r7, @newline
+			load r8, @error
+			jump @request
+			
+@fail:		echo r8			
+@request:	echo r6
+			iinput @input
+			echo r7
+			jumpiftrue @main
+			jump @fail
+
+@main:		load r3, @input				
+			move r4, 1
+			move r5, 0
+			call @fibonacci
+			echo r0
+			halt
+
+@fibonacci:	testequals r3, r4
+			jumpiftrue @isOne
+			testequals r3, r5
+			jumpiftrue @isZero
+			
+			push r3
+			decrement r3
+			call @fibonacci
+			push r0
+			decrement r3
+			call @fibonacci
+			pop r1
+			add r0, r0, r1
+			pop r3
+			ret
+
+@isOne:		move r0, 1
+			ret
+
+@isZero:	move r0, 0
+			ret
+
+@prompt:	DEFSTR "Unesite zeljeni fibonaccijev broj: "
+@newline:	DEFSTR "\n"
+@error:		DEFSTR "Unos nije moguce protumaciti kao cijeli broj.\n"
+@input:		DEFINT 0
+
+# for stack
+			RESERVE:20
+@stackTop:	RESERVE
