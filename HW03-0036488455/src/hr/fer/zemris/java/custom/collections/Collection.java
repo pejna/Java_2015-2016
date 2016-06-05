@@ -1,6 +1,6 @@
 /**
  * Package contains custom collection, it's implementations for use 
- * with all object types and supoorting classes for use with these
+ * with all object types and supporting classes for use with these
  * collections.
  * 
  */

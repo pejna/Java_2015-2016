@@ -1,0 +1,24 @@
+
+var _mxmMetadata = {};
+_mxmMetadata["artist"]="Simon & Garfunkel";
+_mxmMetadata["track"]="The Sound of Silence";
+_mxmMetadata["api_application_id"]=1409608050492;
+_mxmMetadata["track_id"]=16945477;
+
+var _mxmPixel = document.createElement("img");
+_mxmPixel.border='0';_mxmPixel.width='0';_mxmPixel.heigth='0';	_mxmPixel.alt='';var myrand=Math.floor(Math.random()*99999999999);_mxmPixel.src='http://tracking.musixmatch.com/p1.0/A9SEvNMQmOwX2lugIImPZjaWfCc5GnTK967YBrTLBhlxWN4/661y5fsaYwAHqsNWV3PWdG9CHQiHJwiKlZbGWxgiCYD0P0329mtmbO8quiDbfzuKDqh8eGV3sZWWPJk1B6SAnJIrSK/TqQyFOk+UIg7PweAcnjx5OfkYvcTl91lx/SbmJHh9kjaDowkUdZ76BZPmJwiIUaXgVsx94keSsilRKlajZvTUNsxR9Xo/gTDgg3eE3zy040PuRB+0vAEK7tm4w0YK+xx6Tm71Dd85I7+E1hZMO3cdHpJHqxOKU+yh7Fnr/16GiIQ9aPr6uLzMG4g2aw+a/0t8S0jMegVhnUCdSwqEaitOC3zEgJR7m/o6v7YV6Z2SwjdtXxlM4i5v+jXGj+lCbZoLwWlsIPgolExRfyfsRE6Udchl9/36rxc=/?rnd='+myrand;document.getElementsByTagName('head')[0].appendChild(_mxmPixel);
+
+
+                var _gaq = _gaq || [];
+				//LEGACY MODE 
+
+					_gaq.push(['_setCustomVar',1,'Artist',"Simon & Garfunkel"]);
+					_gaq.push(['_setCustomVar',1,'Track',"The Sound of Silence"]);
+					_gaq.push(['_setCustomVar',1,'TrackingMode','active']);
+		            _gaq.push(['_setAccount', 'UA-27006971-1'],['_trackPageview', '/'+ _mxmMetadata['api_application_id'] +'/lyricsview/' + _mxmMetadata['artist'] + '_' + '/' + _mxmMetadata['track'] + '_'+ _mxmMetadata['track_id']]);
+		
+		            (function() {
+		             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		             })();	
