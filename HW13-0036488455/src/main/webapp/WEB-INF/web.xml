@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	metadata-complete="false" version="3.0">
+	<display-name>Webapp2</display-name>
+	<description>
+     Aplication for homework
+  </description>
+
+	<listener>
+		<listener-class>hr.fer.zemris.java.hw13.listeners.StartupTimeContextListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>setColor</servlet-name>
+		<servlet-class>hr.fer.zemris.java.hw13.SetColorServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>trigonometric</servlet-name>
+		<servlet-class>hr.fer.zemris.java.hw13.TrigonometricServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>joke</servlet-name>
+		<servlet-class>hr.fer.zemris.java.hw13.FunnyServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>report</servlet-name>
+		<jsp-file>/report.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>surveyChart</servlet-name>
+		<servlet-class>hr.fer.zemris.java.hw13.ReportChartServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>power</servlet-name>
+		<servlet-class>hr.fer.zemris.java.hw13.PowerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>powerSheet</servlet-name>
+		<servlet-class>hr.fer.zemris.java.hw13.SheetServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>appInfo</servlet-name>
+		<servlet-class>hr.fer.zemris.java.hw13.InfoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>votingIndex</servlet-name>
+		<servlet-class>hr.fer.zemris.java.hw13.voting.VotingServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>votingVote</servlet-name>
+		<servlet-class>hr.fer.zemris.java.hw13.voting.VoteServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>votingChart</servlet-name>
+		<servlet-class>hr.fer.zemris.java.hw13.voting.VoteChartServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>votingResult</servlet-name>
+		<servlet-class>hr.fer.zemris.java.hw13.voting.VoteResultServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>votingSheet</servlet-name>
+		<servlet-class>hr.fer.zemris.java.hw13.voting.VoteSheetServlet</servlet-class>
+	</servlet>
+
+
+
+	<servlet-mapping>
+		<servlet-name>setColor</servlet-name>
+		<url-pattern>/setcolor</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>trigonometric</servlet-name>
+		<url-pattern>/trigonometric</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>joke</servlet-name>
+		<url-pattern>/funny</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>report</servlet-name>
+		<url-pattern>/report</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>surveyChart</servlet-name>
+		<url-pattern>/surveychart</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>power</servlet-name>
+		<url-pattern>/power</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>powerSheet</servlet-name>
+		<url-pattern>/powersheet.xls</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>appInfo</servlet-name>
+		<url-pattern>/appinfo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>votingIndex</servlet-name>
+		<url-pattern>/glasanje</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>votingVote</servlet-name>
+		<url-pattern>/glasanje-glasaj</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>votingResult</servlet-name>
+		<url-pattern>/glasanje-rezultati</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>votingSheet</servlet-name>
+		<url-pattern>/results.xls</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>votingChart</servlet-name>
+		<url-pattern>/glasanje-diagram</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>
